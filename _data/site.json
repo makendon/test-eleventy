@@ -1,0 +1,9 @@
+{
+    "name": "Floki's Finds",
+    "url": "https://example.com",
+    "lang": "en",
+    "author": {
+        "name": "Floki",
+        "email": "floki@example.com"
+    }
+}
