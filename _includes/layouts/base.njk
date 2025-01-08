@@ -1,17 +1,13 @@
 <!DOCTYPE html>
 <html lang="{{ site.lang or 'en' }}">
   {%- include "partials/head.html" -%}
-
   <body>
-    {%- include "partials/header.html" -%}
-
+    {%- include "partials/header.njk" -%}
     <main class="page-content" aria-label="Content">
       <div class="wrapper">
         {{- content | safe -}}
       </div>
     </main>
-
     {%- include "partials/footer.html" -%}
   </body>
-
 </html>

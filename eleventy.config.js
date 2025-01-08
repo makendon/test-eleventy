@@ -1,5 +1,7 @@
 export default async function(eleventyConfig) {
-// Configure Eleventy
+    // Configure Eleventy
+    eleventyConfig.addWatchTarget("./_sass/");
+    eleventyConfig.addPassthroughCopy("./css/");
 };
 
 export const config = {
@@ -26,6 +28,5 @@ export const config = {
 		data: "../_data",          // default: "_data" (`input` relative)
 		output: "_site"
 	},
-
-    // Add new stuff here,
 };
+

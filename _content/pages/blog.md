@@ -1,6 +1,5 @@
 ---
 title: Blog
-permalink: /blog/
-layout: layouts/blog.html
+layout: layouts/blog.njk
 ---
 Floki's thoughts...

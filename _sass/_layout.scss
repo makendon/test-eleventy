@@ -1,0 +1,15 @@
+// Layout styles
+
+@use 'variables' as vars;
+
+h1 {
+    font-size: 2em;
+    margin-bottom: 0.5em;
+    color: green;
+}
+
+p {
+    font-size: 1.2em;
+    margin-bottom: 0.5em;
+    color: vars.$tertiary-color;
+}
