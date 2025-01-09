@@ -1,7 +1,12 @@
+import syntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
+import eleventyNavigationPlugin from "@11ty/eleventy-navigation";
+
 export default async function(eleventyConfig) {
     // Configure Eleventy
     eleventyConfig.addWatchTarget("./_sass/");
     eleventyConfig.addPassthroughCopy("./css/");
+    eleventyConfig.addPlugin(syntaxHighlight);
+    eleventyConfig.addPlugin(eleventyNavigationPlugin);
 };
 
 export const config = {

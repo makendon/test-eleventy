@@ -1,11 +1,5 @@
 <header>
   <nav>
-    <ul>
-      {% for item in navigation.items %}
-        <li>
-          <a href="{{ item.url }}">{{ item.text }}</a>
-        </li>
-      {% endfor %}
-    </ul>
+    {{ collections.all | eleventyNavigation | eleventyNavigationToHtml | safe }}
   </nav>
 </header>
