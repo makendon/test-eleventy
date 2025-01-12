@@ -2,14 +2,62 @@
 
 @use 'variables' as vars;
 
-h1 {
-    font-size: 2em;
-    margin-bottom: 0.5em;
-    color: green;
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  background-color: vars.$head-foot-color;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2em;
+  font-weight: 700;
 }
 
-p {
-    font-size: 1.2em;
-    margin-bottom: 0.5em;
-    color: vars.$tertiary-color;
+.site-logo {
+  position: absolute;
+  left: 2em;
+}
+
+.icon-link {
+  color: #000000;
+
+  &:hover {
+    color: #ff8c00;
+  }
+}
+
+.site-nav {
+  display: flex;
+  align-items: center;
+
+  li {
+    list-style: none;
+    display: inline-block;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: vars.$link-color;
+    text-decoration: underline;
+    text-decoration-style: dashed;
+  }
+}
+
+.site-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: vars.$head-foot-color;
+  color: vars.$head-foot-text-color;
+  height: 2em;
+  position: relative;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  font-weight: 700;
+  margin-top: 2em;
 }

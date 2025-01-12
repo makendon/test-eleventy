@@ -1,8 +1,18 @@
+import markdownit from 'markdown-it'
+import { full as emoji } from 'markdown-it-emoji'
 import syntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
 import eleventyNavigationPlugin from "@11ty/eleventy-navigation";
 
 export default async function(eleventyConfig) {
-    // Configure Eleventy
+    // markdown-it options
+    let options = {
+		html: true,
+		breaks: true,
+		linkify: true,
+	};
+    // Configure eleventy
+    eleventyConfig.setLibrary("md", markdownit(options));
+    eleventyConfig.amendLibrary("md", (mdLib) => mdLib.use(emoji));
     eleventyConfig.addWatchTarget("./_sass/");
     eleventyConfig.addPassthroughCopy("./css/");
     eleventyConfig.addPlugin(syntaxHighlight);
@@ -34,4 +44,3 @@ export const config = {
 		output: "_site"
 	},
 };
-

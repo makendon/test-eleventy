@@ -1,5 +1,45 @@
+@import url('https://fonts.googleapis.com/css?family=Architects+Daughter');
+
 // Define defaults for each variable
-$base-font-family: -apple-system, sans-serif;
-$primary-color: rebeccapurple;
-$secondary-color: tomato;
-$tertiary-color: dodgerblue;
+$base-font-family: 'Architects Daughter', cursive;
+$base-font-size:   18px !default;
+$base-font-weight: 400 !default;
+$small-font-size:  $base-font-size * 0.875 !default;
+$large-font-size: 28px !default;
+$base-line-height: 1.5 !default;
+
+$spacing-unit:     30px !default;
+
+$text-color:       #111111 !default;
+$text-color-dark:  #fcfcfc !default;
+$background-color: white !default;
+$background-color-dark: #121212 !default;
+$link-color:      #CF1020 !default;
+$link-color-dark: #f24553 !default;
+$head-foot-text-color: #004225 !default;
+$head-foot-text-color-dark: #e0e0e0 !default;
+$head-foot-color: #f0f0f0 !default;
+$head-foot-color-dark: #1d1d1d !default;
+$grey-color:       #828282 !default;
+$grey-color-light: lighten($grey-color, 30%) !default;
+$grey-color-v-light: lighten($grey-color, 45%) !default;
+$grey-color-dark:  #1c1c1c !default;
+$brand-color:     #004225 !default;
+
+$table-text-align: left !default;
+
+// Width of the content area
+$content-width:    800px !default;
+$mobile:          600px !default;
+$laptop:        800px !default;
+
+// Mixins
+@mixin media-query($device) {
+    @media screen and (max-width: $device) {
+      @content;
+    }
+  }
+  
+@mixin relative-font-size($ratio) {
+    font-size: $base-font-size * $ratio;
+}
