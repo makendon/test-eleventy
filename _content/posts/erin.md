@@ -1,6 +1,10 @@
 ---
-title: Erin
+title: Do I like Erin
 date: 2025-01-12
+tags:
+  - humans
+  - babies
+  - toddlers
 ---
 ## Erin
 

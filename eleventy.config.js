@@ -2,6 +2,9 @@ import markdownit from 'markdown-it'
 import { full as emoji } from 'markdown-it-emoji'
 import syntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
 import eleventyNavigationPlugin from "@11ty/eleventy-navigation";
+import { dateFormat } from './filters/dateFormat.js';
+import { filterTagList } from './filters/filterTagList.js';
+import { wordCount } from './filters/wordCount.js';
 
 export default async function(eleventyConfig) {
     // markdown-it options
@@ -17,6 +20,9 @@ export default async function(eleventyConfig) {
     eleventyConfig.addPassthroughCopy("./css/");
     eleventyConfig.addPlugin(syntaxHighlight);
     eleventyConfig.addPlugin(eleventyNavigationPlugin);
+    eleventyConfig.addFilter("dateFormat", dateFormat);
+    eleventyConfig.addFilter("filterTagList", filterTagList);
+    eleventyConfig.addFilter("wordCount", wordCount);
 };
 
 export const config = {

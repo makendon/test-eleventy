@@ -41,6 +41,7 @@ blockquote {
     padding-left: calc(vars.$spacing-unit / 2);
     padding-top: calc(vars.$spacing-unit / 2);
     padding-bottom: calc(vars.$spacing-unit / 2);
+    margin-bottom: 1em;
 }
 
 blockquote, q{
@@ -67,13 +68,13 @@ input{
  code {
    border: 1px solid;
    border-radius: 3px;
-   background-color: vars.$background-color;
+   background-color: vars.$grey-color-v-light;
    color: vars.$text-color;
    padding: 1px 5px;
    border: 0;
-   font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
-   line-height: 1.5;
-   font-size: medium;
+   font-family: vars.$code-font-family;
+   line-height: 1;
+   font-size: vars.$small-font-size;
  }
  
 
@@ -122,5 +123,21 @@ p {
         max-width:         calc(#{vars.$content-width} - (#{vars.$spacing-unit}));
         padding-right: calc(vars.$spacing-unit / 2);
         padding-left: calc(vars.$spacing-unit / 2);
+    }
+}
+
+//links
+a {
+    color: vars.$link-color;
+    text-decoration: none;
+
+    &:hover {
+        color: darken(vars.$link-color, 10%);
+        text-decoration: underline;
+        text-decoration-style: dashed;
+    }
+
+    &:visited {
+        color: darken(vars.$link-color, 20%);
     }
 }

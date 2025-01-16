@@ -3,4 +3,4 @@ title: About
 eleventyNavigation:
   key: About
 ---
-I am a cat... haha
+I am a cat :cat:

@@ -1,9 +1,11 @@
 <ul>
   {%- for post in collections.post | reverse -%}
-    <li style="list-style-type: none;">
+    <li class="post-list">
+      <code>{{ post.date | dateFormat }}</code>
       <h3>
         <a href="{{ post.url }}">{{ post.data.title }}</a>
       </h3>
+      <!-- Insert excerpt -->
     </li>
   {%- endfor -%}
 </ul>
