@@ -59,18 +59,25 @@
   margin-top: 2em;
 }
 
+.homepage-text {
+  text-align: center;
+}
+
+.homepage-image {
+  width: 100%;
+  height: auto;
+}
+
 .post-list {
-    display: flex;
+    list-style-type: none;
     margin-top: 1em;
     margin-bottom: 1em;
 
     ul {
-        list-style-type: disc;
         padding-left: 1.5em;
     }
 
     li {
-        list-style-type: disc;
         padding-left: 1.5em;
     }
 
@@ -87,6 +94,11 @@
 .post-title {
 }
 
+.post-description {
+  margin-top: 1em;
+  margin-bottom: 2em;
+}
+
 .post-author {
     font-family: vars.$base-font-family;
     font-size: vars.$base-font-size;
@@ -96,6 +108,9 @@
 .post-date {
     font-family: vars.$code-font-family;
     font-size: vars.$code-font-size;
+}
+
+.post-desc {
 }
 
 .post-content {
@@ -137,12 +152,10 @@
     margin-bottom: 1em;
 
     ul {
-        list-style-type: disc;
         padding-left: 1.5em;
     }
 
     li {
-        list-style-type: disc;
         padding-left: 1.5em;
     }
 

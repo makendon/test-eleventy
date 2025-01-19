@@ -1,5 +1,5 @@
 ---
-layout: layouts/base.njk
+layout: base.njk
 ---
 <article class="post">
   <header class="post-header">
@@ -7,9 +7,9 @@ layout: layouts/base.njk
     <p class="post-author">
       {{ metadata.author.name }}
     </p>
-    <p class="post-date">{{ date | dateFormat }}</p>
+    <p class="post-date">📅&nbsp;{{ date | dateFormat }}</p>
     <div class="post-reading-time">
-      {% include "partials/reading-time.njk" %}
+      {% include "reading-time.njk" %}
     </div>
       <div class="post-tags">
         {% if tags %}
@@ -22,11 +22,12 @@ layout: layouts/base.njk
     {% endif %}
   </header>
   <div class="post-content">
+    <p class="post-description">{{ description }}</p>
     {{ content | safe }}
   </div>
-{%- if collections.post %}
-{%- set previousPost = collections.post | getPreviousCollectionItem %}
-{%- set nextPost = collections.post | getNextCollectionItem %}
+{%- if collections.posts %}
+{%- set previousPost = collections.posts | getPreviousCollectionItem %}
+{%- set nextPost = collections.posts | getNextCollectionItem %}
 {%- if nextPost or previousPost %}
 <ul class="links-nextprev">
   {%- if previousPost %}<li class="links-nextprev-prev">&larr; Previous<br> <a href="{{ previousPost.url }}">{{ previousPost.data.title }}</a></li>{% endif %}

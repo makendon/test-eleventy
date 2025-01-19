@@ -1,5 +1,5 @@
 ---
-layout: layouts/home.html
+layout: home.html
 eleventyNavigation:
   key: Home
 ---

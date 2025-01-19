@@ -1,23 +1,57 @@
 import markdownit from 'markdown-it'
+import markdownItAnchor from 'markdown-it-anchor';
 import { full as emoji } from 'markdown-it-emoji'
 import syntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
 import eleventyNavigationPlugin from "@11ty/eleventy-navigation";
-import { dateFormat } from './filters/dateFormat.js';
-import { filterTagList } from './filters/filterTagList.js';
-import { wordCount } from './filters/wordCount.js';
+import { feedPlugin } from "@11ty/eleventy-plugin-rss";
+import { dateFormat } from './src/_scripts/dateFormat.js';
+import { filterTagList } from './src/_scripts/filterTagList.js';
+import { wordCount } from './src/_scripts/wordCount.js';
 
 export default async function(eleventyConfig) {
     // markdown-it options
-    let options = {
-		html: true,
-		breaks: true,
-		linkify: true,
-	};
+    const mdOptions = {
+        html: true,
+        breaks: true,
+        linkify: true
+    };
+	// Anchor plugin options
+    const anchorOptions = {
+        level: 2,
+        permalink: markdownItAnchor.permalink.linkInsideHeader({
+            symbol: "#",
+            placement: "before"
+        }),
+        slugify: (s) => s.trim().toLowerCase().replace(/\s+/g, "-")
+    };
+	// Configure markdown library with plugins
+    const markdownLibrary = markdownit(mdOptions)
+        .use(markdownItAnchor, anchorOptions)
+        .use(emoji);
+    // RSS feed
+    eleventyConfig.addPlugin(feedPlugin, {
+		type: "atom", // or "rss", "json"
+		outputPath: "/feed.xml",
+		collection: {
+			name: "post", // iterate over `collections.post`
+			limit: 10,     // 0 means no limit
+		},
+		metadata: {
+			language: "en",
+			title: "Floki's Blog",
+			subtitle: "Find out what Floki is up to.",
+			base: "https://example.com/",
+			author: {
+				name: "Floki",
+				email: "", // Optional
+			}
+		}
+    });
     // Configure eleventy
-    eleventyConfig.setLibrary("md", markdownit(options));
-    eleventyConfig.amendLibrary("md", (mdLib) => mdLib.use(emoji));
-    eleventyConfig.addWatchTarget("./_sass/");
+	eleventyConfig.setLibrary("md", markdownLibrary);
+    eleventyConfig.addWatchTarget("./src/_sass/");
     eleventyConfig.addPassthroughCopy("./css/");
+    eleventyConfig.addPassthroughCopy("./src/assets/");
     eleventyConfig.addPlugin(syntaxHighlight);
     eleventyConfig.addPlugin(eleventyNavigationPlugin);
     eleventyConfig.addFilter("dateFormat", dateFormat);
@@ -44,9 +78,10 @@ export const config = {
 
     // These are all optional:
 	dir: {
-		input: "_content",          // default: "."
-		includes: "../_includes",  // default: "_includes" (`input` relative)
-		data: "../_data",          // default: "_data" (`input` relative)
-		output: "_site"
+		input: "src",          // default: "."
+		includes: "_includes",  // default: "_includes" (`input` relative)
+		layouts: "_layouts",    // default: "_layouts" (`input` relative)
+		data: "_data",          // default: "_data" (`input` relative)
+		output: "dist",        // default: "_site"
 	},
 };

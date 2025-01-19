@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="{{ metadata.lang or 'en' }}">
-  {% include "partials/head.html" %}
+  {% include "head.html" %}
   <body>
-    {% include "partials/header.njk" %}
+    {% include "header.njk" %}
     <main class="page-content" aria-label="Content">
       <div class="wrapper">
         {{ content | safe }}
       </div>
     </main>
-    {% include "partials/footer.html" %}
+    {% include "footer.html" %}
   </body>
 </html>

@@ -5,6 +5,7 @@ tags:
   - humans
   - babies
   - toddlers
+description: This post is all about the little human, that the larger humans call Erin.
 ---
 ## Erin
 

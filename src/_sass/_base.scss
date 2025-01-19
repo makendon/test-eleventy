@@ -82,23 +82,28 @@ input{
 h1, h2, h3, h4, h5, h6 {
   color: vars.$text-color;
   font-family: vars.$base-font-family;
+  margin-top: 0.5em;
   margin-bottom: 0.5em;
+}
+
+h2, h3 {
+    border-bottom: 1px solid grey;
 }
 
 h1 {
     font-size: 2em;
 
-    &::before {
+   /*&::before {
     content: "/ ";
-    }
+    }*/
 }
 
 h2 {
     font-size: 1.5em;
 
-    &::before {
+    /*&::before {
         content: "// ";
-    }
+    }*/
 }
 
 p {

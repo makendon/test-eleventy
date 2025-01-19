@@ -20,3 +20,7 @@ eleventyNavigation:
 - Shoulder surfing (being a living scarf)
 - Being a lord
 - Trotting
+
+### Bonus Likes
+
+- Catnip
