@@ -40,6 +40,8 @@
 }
 
 .site-nav {
+  margin-bottom: - vars.$spacing-unit;
+
   li {
     list-style: none;
     display: inline-block;
@@ -85,7 +87,6 @@
         margin-right: 1em;
         margin-bottom: 1em;
     }
-
 }
 
 .post-header {
@@ -94,23 +95,25 @@
 .post-title {
 }
 
+.post-meta {
+    gap: 1em;
+}
+
 .post-description {
-  margin-top: 1em;
-  margin-bottom: 2em;
+    margin-top: 1em;
+    margin-bottom: 2em;
 }
 
 .post-author {
     font-family: vars.$base-font-family;
     font-size: vars.$base-font-size;
+    font-weight: 700;
     color: vars.$text-color;
 }
 
 .post-date {
     font-family: vars.$code-font-family;
     font-size: vars.$code-font-size;
-}
-
-.post-desc {
 }
 
 .post-content {
@@ -147,7 +150,7 @@
 }
 
 .tag-list {
-    display: flex;
+    list-style-type: none;
     margin-top: 1em;
     margin-bottom: 1em;
 

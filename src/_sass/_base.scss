@@ -7,7 +7,7 @@
     box-sizing: border-box;
 }
 
-html, body, div, span, object, iframe, figure, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, code, em, img, small, strike, strong, sub, sup, tt, b, u, i, ol, ul, li, fieldset, form, label, table, caption, tbody, tfoot, thead, tr, th, td, main, canvas, embed, footer, header, nav, section, video{
+html, body, div, span, object, iframe, figure, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, code, em, img, small, strike, strong, sub, sup, tt, b, u, i, ol, ul, li, fieldset, form, label, table, caption, tbody, tfoot, thead, tr, th, td, main, canvas, embed, footer, header, nav, section, video {
     margin: 0;
     padding: 0;
     border: 0;
@@ -63,31 +63,54 @@ input{
     border-radius: 0;
 }
 
+// Custom styles
+// Wrapper
+.wrapper {
+    max-width: calc(#{vars.$content-width} - (#{vars.$spacing-unit} * 2));
+    max-width: calc(#{vars.$content-width} - (#{vars.$spacing-unit} * 2));
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: vars.$spacing-unit;
+    padding-left: vars.$spacing-unit;
+    @extend %clearfix !optional;
 
-// Code `backticks` styling
- code {
-   border: 1px solid;
-   border-radius: 3px;
-   background-color: vars.$grey-color-v-light;
-   color: vars.$text-color;
-   padding: 1px 5px;
-   border: 0;
-   font-family: vars.$code-font-family;
-   line-height: 1;
-   font-size: vars.$small-font-size;
- }
- 
-
-//Headings and paragraphs
-h1, h2, h3, h4, h5, h6 {
-  color: vars.$text-color;
-  font-family: vars.$base-font-family;
-  margin-top: 0.5em;
-  margin-bottom: 0.5em;
+    @include vars.media-query(vars.$laptop) {
+        max-width: -webkit-calc(#{vars.$content-width} - (#{vars.$spacing-unit}));
+        max-width:         calc(#{vars.$content-width} - (#{vars.$spacing-unit}));
+        padding-right: calc(vars.$spacing-unit / 2);
+        padding-left: calc(vars.$spacing-unit / 2);
+    }
 }
 
-h2, h3 {
-    border-bottom: 1px solid grey;
+body {
+    font: vars.$base-font-weight #{vars.$base-font-size}/#{vars.$base-line-height} vars.$base-font-family;
+    color: vars.$text-color;
+    background-color: vars.$background-color;
+    -webkit-text-size-adjust: 100%;
+    -webkit-font-feature-settings: "kern" 1;
+       -moz-font-feature-settings: "kern" 1;
+         -o-font-feature-settings: "kern" 1;
+            font-feature-settings: "kern" 1;
+    font-kerning: normal;
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    flex-direction: column;
+    padding-top: 10px;
+    margin-top: 1em;
+}
+
+figure, h1, h2, h3, h4, h5, h6, p, blockquote, pre, ol, ul, li {
+    margin-bottom: vars.$spacing-unit / 2;
+}
+
+// Headings and paragraphs
+h1, h2, h3, h4, h5, h6 {
+    color: vars.$text-color;
+    font-family: vars.$base-font-family;
+    font-weight: 500;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
 }
 
 h1 {
@@ -113,25 +136,20 @@ p {
     font-size: vars.$base-font-size;
 }
 
-//Wrapper
-.wrapper {
-    max-width: calc(#{vars.$content-width} - (#{vars.$spacing-unit} * 2));
-    max-width: calc(#{vars.$content-width} - (#{vars.$spacing-unit} * 2));
-    margin-right: auto;
-    margin-left: auto;
-    padding-right: vars.$spacing-unit;
-    padding-left: vars.$spacing-unit;
-    @extend %clearfix !optional;
-
-    @include vars.media-query(vars.$laptop) {
-        max-width: -webkit-calc(#{vars.$content-width} - (#{vars.$spacing-unit}));
-        max-width:         calc(#{vars.$content-width} - (#{vars.$spacing-unit}));
-        padding-right: calc(vars.$spacing-unit / 2);
-        padding-left: calc(vars.$spacing-unit / 2);
-    }
+// Code `backticks` styling
+code {
+    border: 1px solid;
+    border-radius: 3px;
+    background-color: vars.$grey-color-v-light;
+    color: vars.$text-color;
+    padding: 1px 5px;
+    border: 0;
+    font-family: vars.$code-font-family;
+    line-height: 1;
+    font-size: vars.$small-font-size;
 }
 
-//links
+// Links
 a {
     color: vars.$link-color;
     text-decoration: none;
@@ -144,5 +162,37 @@ a {
 
     &:visited {
         color: darken(vars.$link-color, 20%);
+    }
+}
+
+// Images
+img {
+    max-width: 100%;
+    vertical-align: middle;
+}
+
+// Tables
+table {
+    margin-bottom: vars.$spacing-unit;
+    width: 100%;
+    text-align: vars.$table-text-align;
+    color: lighten(vars.$text-color, 18%);
+    border-collapse: collapse;
+    border: 1px solid vars.$grey-color-light;
+    tr {
+      &:nth-child(even) {
+        background-color: (vars.$grey-color-v-light);
+      }
+    }
+    th, td {
+      padding: (vars.$spacing-unit / 3) (vars.$spacing-unit / 2);
+    }
+    th {
+      background-color: lighten(vars.$grey-color-light, 3%);
+      border: 1px solid darken(vars.$grey-color-light, 4%);
+      border-bottom-color: darken(vars.$grey-color-light, 12%);
+    }
+    td {
+      border: 1px solid vars.$grey-color-light;
     }
 }

@@ -4,13 +4,17 @@ layout: base.njk
 <article class="post">
   <header class="post-header">
     <h1 class="post-title">{{ title }}</h1>
+    <p class="post-description">{{ description }}</p>
     <p class="post-author">
       {{ metadata.author.name }}
     </p>
-    <p class="post-date">📅&nbsp;{{ date | dateFormat }}</p>
+    <div class="post-meta">
+      <p>📅&nbsp;{{ date | dateFormat }}&nbsp; |&nbsp; {% include "reading-time.njk" %}</p>
+    </div>
+    <!--<p class="post-date">📅&nbsp;{{ date | dateFormat }}</p>
     <div class="post-reading-time">
       {% include "reading-time.njk" %}
-    </div>
+    </div>-->
       <div class="post-tags">
         {% if tags %}
         <p>🏷️&nbsp;
@@ -22,7 +26,6 @@ layout: base.njk
     {% endif %}
   </header>
   <div class="post-content">
-    <p class="post-description">{{ description }}</p>
     {{ content | safe }}
   </div>
 {%- if collections.posts %}
