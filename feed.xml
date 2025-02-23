@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <title>Floki&#39;s Blog</title>
   <subtitle>Find out what Floki is up to.</subtitle>
-  <link href="https://example.com/feed.xml" rel="self" />
-  <link href="https://example.com/" />
-  <updated>2025-02-23T20:40:41Z</updated>
-  <id>https://example.com/</id>
+  <link href="https://example.com/test-eleventy/feed.xml" rel="self" />
+  <link href="https://example.com/test-eleventy/" />
+  <updated>2025-02-23T21:11:55Z</updated>
+  <id>https://example.com/test-eleventy/</id>
   <author>
     <name>Floki</name>
   </author>
