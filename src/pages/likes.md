@@ -24,3 +24,6 @@ eleventyNavigation:
 ### Bonus Likes
 
 - Catnip
+
+[Dislikes](/dislikes)
+[Erin](/erin)

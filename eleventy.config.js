@@ -25,9 +25,9 @@ export default async function(eleventyConfig) {
         slugify: (s) => s.trim().toLowerCase().replace(/\s+/g, "-")
     };
 	// Configure markdown library with plugins
-    const markdownLibrary = markdownit(mdOptions)
+	const markdownLibrary = markdownit(mdOptions)
         .use(markdownItAnchor, anchorOptions)
-        .use(emoji);
+        .use(emoji)
     // RSS feed
     eleventyConfig.addPlugin(feedPlugin, {
 		type: "atom", // or "rss", "json"
