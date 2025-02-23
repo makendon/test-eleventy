@@ -2,6 +2,7 @@
 title: Likes
 eleventyNavigation:
   key: Likes
+  order: 3
 ---
 ## I like
 

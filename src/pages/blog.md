@@ -3,6 +3,7 @@ title: Blog
 layout: blog.njk
 eleventyNavigation:
   key: Blog
+  order: 5
 ---
 > Floki's thoughts are his own :brain:
 
