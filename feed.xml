@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+  <title>Floki&#39;s Blog</title>
+  <subtitle>Find out what Floki is up to.</subtitle>
+  <link href="https://example.com/feed.xml" rel="self" />
+  <link href="https://example.com/" />
+  <updated>2025-02-23T20:14:04Z</updated>
+  <id>https://example.com/</id>
+  <author>
+    <name>Floki</name>
+  </author>
+</feed>
