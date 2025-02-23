@@ -9,7 +9,7 @@
     "build:eleventy": "npx eleventy",
     "start": "npm-run-all build:sass --parallel watch:*",
     "build": "npm-run-all build:*",
-    "build-ghpages": "npm-run-all build:* --pathprefix=/eleventy-base-blog/"
+    "build-ghpages": "npm-run-all build:* --pathprefix=/test-eleventy/"
   },
   "keywords": [],
   "author": "",
