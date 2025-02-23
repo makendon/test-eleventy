@@ -7,6 +7,7 @@ import { feedPlugin } from "@11ty/eleventy-plugin-rss";
 import { dateFormat } from './src/_scripts/dateFormat.js';
 import { filterTagList } from './src/_scripts/filterTagList.js';
 import { wordCount } from './src/_scripts/wordCount.js';
+import { EleventyHtmlBasePlugin } from "@11ty/eleventy";
 
 export default async function(eleventyConfig) {
     // markdown-it options
@@ -57,6 +58,7 @@ export default async function(eleventyConfig) {
     eleventyConfig.addFilter("dateFormat", dateFormat);
     eleventyConfig.addFilter("filterTagList", filterTagList);
     eleventyConfig.addFilter("wordCount", wordCount);
+	eleventyConfig.addPlugin(EleventyHtmlBasePlugin);
 };
 
 export const config = {
@@ -84,4 +86,7 @@ export const config = {
 		data: "_data",          // default: "_data" (`input` relative)
 		output: "dist",        // default: "_site"
 	},
+
+	pathPrefix: "/test-eleventy/",
+
 };
