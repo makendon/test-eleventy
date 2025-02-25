@@ -87,6 +87,6 @@ export const config = {
 		output: "dist",        // default: "_site"
 	},
 
-	pathPrefix: "/test-eleventy/",
+	// pathPrefix: "/test-eleventy/",
 
 };
