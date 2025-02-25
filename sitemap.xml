@@ -34,63 +34,63 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://example.com/test-eleventy/post-1/</loc>
+    <loc>https://example.com/post-1/</loc>
     <lastmod>2025-01-01T00:00:00.000Z</lastmod>
   </url>
   
   <url>
-    <loc>https://example.com/test-eleventy/post-2/</loc>
+    <loc>https://example.com/post-2/</loc>
     <lastmod>2025-01-07T00:00:00.000Z</lastmod>
   </url>
   
   <url>
-    <loc>https://example.com/test-eleventy/post-3/</loc>
+    <loc>https://example.com/post-3/</loc>
     <lastmod>2025-01-09T00:00:00.000Z</lastmod>
   </url>
   
   <url>
-    <loc>https://example.com/test-eleventy/erin/</loc>
+    <loc>https://example.com/erin/</loc>
     <lastmod>2025-01-12T00:00:00.000Z</lastmod>
   </url>
   
   <url>
-    <loc>https://example.com/test-eleventy/404.html</loc>
-    <lastmod>2025-02-23T22:04:49.983Z</lastmod>
+    <loc>https://example.com/404.html</loc>
+    <lastmod>2025-02-25T20:39:40.124Z</lastmod>
   </url>
   
   <url>
-    <loc>https://example.com/test-eleventy/about/</loc>
-    <lastmod>2025-02-23T22:04:49.983Z</lastmod>
+    <loc>https://example.com/about/</loc>
+    <lastmod>2025-02-25T20:39:40.124Z</lastmod>
   </url>
   
   <url>
-    <loc>https://example.com/test-eleventy/blog/</loc>
-    <lastmod>2025-02-23T22:04:49.983Z</lastmod>
+    <loc>https://example.com/blog/</loc>
+    <lastmod>2025-02-25T20:39:40.125Z</lastmod>
   </url>
   
   <url>
-    <loc>https://example.com/test-eleventy/dislikes/</loc>
-    <lastmod>2025-02-23T22:04:49.983Z</lastmod>
+    <loc>https://example.com/dislikes/</loc>
+    <lastmod>2025-02-25T20:39:40.125Z</lastmod>
   </url>
   
   <url>
-    <loc>https://example.com/test-eleventy/</loc>
-    <lastmod>2025-02-23T22:04:49.983Z</lastmod>
+    <loc>https://example.com/</loc>
+    <lastmod>2025-02-25T20:39:40.125Z</lastmod>
   </url>
   
   <url>
-    <loc>https://example.com/test-eleventy/likes/</loc>
-    <lastmod>2025-02-23T22:04:49.983Z</lastmod>
+    <loc>https://example.com/likes/</loc>
+    <lastmod>2025-02-25T20:39:40.125Z</lastmod>
   </url>
   
   <url>
-    <loc>https://example.com/test-eleventy/tags/post/</loc>
-    <lastmod>2025-02-23T22:04:49.983Z</lastmod>
+    <loc>https://example.com/tags/post/</loc>
+    <lastmod>2025-02-25T20:39:40.125Z</lastmod>
   </url>
   
   <url>
-    <loc>https://example.com/test-eleventy/feed.xml</loc>
-    <lastmod>2025-02-23T22:05:09.593Z</lastmod>
+    <loc>https://example.com/feed.xml</loc>
+    <lastmod>2025-02-25T20:40:01.078Z</lastmod>
   </url>
   
 </urlset>
